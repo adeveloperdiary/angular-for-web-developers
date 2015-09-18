@@ -34,7 +34,7 @@
                         <div class="row height-65">
                             <label class="col-sm-1 filter-text">Filter By :</label>
                             <div class="col-sm-2 filter-input"><input type="text" class="form-control" /></div>
-                            <button type="button" class="btn btn-danger pull-right btn-task-category">Create Label</button>
+                            <button type="button" class="btn btn-danger pull-right btn-task-category" onclick="javascript:window.open('createLabel.html','_self')">Create Label</button>
                         </div>
                     </form>
                 </div>
@@ -59,7 +59,7 @@
 
                                 </div>
                                 <div class="col-sm-1">
-                                    <button type="button" class="btn btn-info pull-right">Add Task</button>
+                                    <button type="button" class="btn btn-info pull-right" onclick="javascript:window.open('createTask.html','_self')">Add Task</button>
                                 </div>
                             </div>
                         </form>
@@ -104,69 +104,7 @@
         </div>
 
 
-        <div class="padding-20">
-            <div class="panel panel-default bg-update">
-                <div class="panel-body">
-                    <div class="panel-top-header">
-                        Create a to-do list
-                        <button type="button" class="btn btn-warning pull-right">Save</button>
-                    </div>
 
-                    <div class="padding-20">
-                        <form class="form-horizontal form-padding padding-bottom-20">
-                            <div class="row">
-                                <div class="col-sm-12" >
-                                    <label class="col-sm-2 form-label">Name :</label>
-                                    <input type="text" class="col-sm-10 input-create-task" value="Create a to-do list"/>
-                                </div>
-                                <div class="col-sm-12" >
-                                    <label class="col-sm-2 form-label">Due Date :</label>
-                                    <input type="text" class="col-sm-2 input-create-task" value="12/30/1981 12AM"/>
-                                    <span class="glyphicon glyphicon-calendar action-icon"  aria-hidden="true"></span>
-                                </div>
-                                <div class="col-sm-12" >
-                                    <label class="col-sm-2 form-label">Note :</label>
-                                    <textarea class="col-sm-10 input-create-task" style="height: 100px;"></textarea>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="padding-20">
-            <div class="panel panel-default bg-update">
-                <div class="panel-body">
-                    <div class="panel-top-header">
-                        Create Label
-                        <button type="button" class="btn btn-warning pull-right">Save</button>
-                    </div>
-
-                    <div class="padding-20">
-                        <form class="form-horizontal form-padding padding-bottom-20"  >
-                            <div class="row">
-                                <div class="col-sm-12" >
-                                    <label class="col-sm-2 form-label" >Name :</label>
-                                    <input type="text" class="col-sm-10 input-create-task" value="Create a to-do list"/>
-                                </div>
-                                <div class="col-sm-12" >
-                                    <label class="col-sm-2 form-label">Color :</label>
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-danger">&nbsp;</button>
-                                        <button type="button" class="btn btn-info">&nbsp;</button>
-                                        <button type="button" class="btn btn-warning">&nbsp;</button>
-                                        <button type="button" class="btn btn-success">&nbsp;</button>
-                                        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 </div>

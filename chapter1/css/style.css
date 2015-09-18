@@ -1,11 +1,12 @@
-body {
+body,html {
    font-family: 'Open Sans', sans-serif !important;
    background: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);
    width:100%;
    min-width: 800px;
-   height: auto;
+   height: 100%;
 
 }
+
 
 #wrapper {
    padding-left: 250px;
