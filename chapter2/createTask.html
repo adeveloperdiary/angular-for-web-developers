@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav ">
+            <li class="sidebar-brand"><a href="#">Task Tracker</a></li>
+            <li><a href="#" class="inbox_icon">Inbox</a><div class="todo-badge">14</div></li>
+            <li><a href="#"  class="all_icon">All Tasks</a><div class="todo-badge">14</div></li>
+            <li><a href="#"  class="pending_icon">All Pending</a><div class="todo-badge">14</div></li>
+            <li><br></li>
+            <li><div class="circle color_red"></div><a href="#">Personal</a><div class="todo-badge">14</div></li>
+            <li><div class="circle color_green"></div><a href="#">Work</a><div class="todo-badge">14</div></li>
+            <li><div class="circle color_blue"></div><a href="#">Travel</a><div class="todo-badge">14</div></li>
+        </ul>
+    </div>
+    <div id="page-content-wrapper">
+
+        <div class="panel panel-default bg-container">
+            <div class="panel-body">
+                <div class="panel-top-header padding-header">
+                    <form class="form-horizontal form-padding">
+                        <div class="row height-65">
+                            <label class="col-sm-1 filter-text">Filter By :</label>
+                            <div class="col-sm-2 filter-input"><input type="text" class="form-control" /></div>
+                            <button type="button" class="btn btn-danger pull-right btn-task-category" onclick="javascript:window.open('createLabel.html','_self')">Create Label</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="padding-20">
+            <div class="panel panel-default bg-update">
+                <div class="panel-body">
+                    <div class="panel-top-header">
+                        Create a to-do list
+                        <button type="button" class="btn btn-warning pull-right" onclick="javascript:window.open('index.html','_self')">Save</button>
+                    </div>
+
+                    <div class="padding-20">
+                        <form class="form-horizontal form-padding padding-bottom-20">
+                            <div class="row">
+                                <div class="col-sm-12" >
+                                    <label class="col-sm-2 form-label">Name :</label>
+                                    <input type="text" class="col-sm-10 input-create-task" value="Create a to-do list"/>
+                                </div>
+                                <div class="col-sm-12" >
+                                    <label class="col-sm-2 form-label">Due Date :</label>
+                                    <input type="text" class="col-sm-2 input-create-task" value="12/30/1981 12AM"/>
+                                    <span class="glyphicon glyphicon-calendar action-icon"  aria-hidden="true"></span>
+                                </div>
+                                <div class="col-sm-12" >
+                                    <label class="col-sm-2 form-label">Note :</label>
+                                    <textarea class="col-sm-10 input-create-task" style="height: 100px;"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

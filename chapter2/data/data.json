@@ -1,0 +1,56 @@
+[
+  {
+    "label-name":"Work",
+    "color":"#647484",
+    "tasks":[
+      {
+        "id":1,
+        "name":"Learn Angular JS",
+        "due-date":"12/30/1981",
+        "note":"",
+        "status":"pending"
+      },
+      {
+        "id":2,
+        "name":"Learn Angular JS",
+        "due-date":"12/30/1981",
+        "note":"",
+        "status":"pending"
+      },
+      {
+        "id":3,
+        "name":"Learn Angular JS",
+        "due-date":"12/30/1981",
+        "note":"",
+        "status":"pending"
+      }
+    ]
+  },
+  {
+    "label-name":"Home",
+    "color":"#453452",
+    "tasks":[
+      {
+        "id":1,
+        "name":"Purchase Grocery",
+        "due-date":"12/30/1981",
+        "note":"",
+        "status":"pending"
+      },
+      {
+        "id":2,
+        "name":"Pay House Rent",
+        "due-date":"12/30/1981",
+        "note":"",
+        "status":"pending"
+      },
+      {
+        "id":3,
+        "name":"Car oil change",
+        "due-date":"12/30/1981",
+        "note":"",
+        "status":"pending"
+      }
+    ]
+  }
+]
