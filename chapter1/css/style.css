@@ -2,7 +2,7 @@ body,html {
    font-family: 'Open Sans', sans-serif !important;
    background: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);
    width:100%;
-   min-width: 800px;
+   min-width: 700px;
    height: 100%;
 
 }
@@ -30,9 +30,6 @@ body,html {
 
 
 }
-
-
-/* Sidebar Styles */
 
 .sidebar-nav {
    position: absolute;
@@ -345,15 +342,41 @@ input[type='checkbox']:checked + .checkbox-label::before {
    padding: 10px 0 10px 0;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 900px) {
    .sidebar-nav > .sidebar-brand a {
       font-size: 25px;
    }
 
-   .filter-text{
-      display: none;
-
+   #wrapper{
+       padding-left: 200px;
    }
+
+    #sidebar-wrapper {
+        left: 200px;
+        margin-left: -200px;
+        width: 200px;
+    }
+
+    .sidebar-nav {
+        width: 200px;
+    }
+
+    .sidebar-nav > .sidebar-brand a {
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 770px) {
+    #btnCreateLabel{
+        display: none;
+    }
+
+    .filter-text {
+        display: none;
+
+    }
 }
 
 .height-65{
