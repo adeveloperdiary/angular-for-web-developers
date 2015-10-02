@@ -1,0 +1,41 @@
+<div class="padding-20" >
+    <div class="panel panel-default bg-update">
+        <div class="panel-body">
+            <div class="panel-top-header">
+                Create Label
+                <button type="button" class="btn btn-warning pull-right" ng-click="saveLabel()">Save</button>
+            </div>
+
+            <div class="padding-20">
+                <form class="form-horizontal form-padding padding-bottom-20"  >
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 form-label" >Name :</label>
+                            <input type="text" class="col-sm-10 input-create-task" ng-model="name" placeholder="Create a to-do list"/>
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 form-label">Color :</label>
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-danger" ng-click="setColor('color_red1')">
+                                    <i class="fa fa-check" ng-show="color=='color_red1'"></i>&nbsp;
+                                </button>
+                                <button type="button" class="btn btn-info" ng-click="setColor('color_sky')">
+                                    <i class="fa fa-check" ng-show="color=='color_sky'"></i>&nbsp;
+                                </button>
+                                <button type="button" class="btn btn-warning" ng-click="setColor('color_yellow')">
+                                    <i class="fa fa-check" ng-show="color=='color_yellow'"></i>&nbsp;
+                                </button>
+                                <button type="button" class="btn btn-success" ng-click="setColor('color_green1')">
+                                    <i class="fa fa-check" ng-show="color=='color_green1'"></i>&nbsp;
+                                </button>
+                                <button type="button" class="btn btn-primary" ng-click="setColor('color_blue1')">
+                                    <i class="fa fa-check" ng-show="color=='color_blue1'"></i>&nbsp;
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

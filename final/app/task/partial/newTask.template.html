@@ -1,0 +1,32 @@
+<div class="padding-20">
+    <div class="panel panel-default bg-update">
+        <div class="panel-body">
+            <div class="panel-top-header">
+                Create a to-do list
+                <button type="button" class="btn btn-warning pull-right" ng-click="saveTasks()" >Save</button>
+            </div>
+
+            <div class="padding-20">
+                <form class="form-horizontal form-padding padding-bottom-20">
+                    <div class="row">
+                        <div class="col-sm-12" >
+                            <label class="col-sm-2 form-label">Name :</label>
+                            <input type="text" class="col-sm-10 input-create-task" placeholder="Create a to-do list"
+                                    ng-model="name"/>
+                        </div>
+                        <div class="col-sm-12" >
+                            <label class="col-sm-2 form-label">Due Date :</label>
+                            <input type="text" class="col-sm-2 input-create-task" value="12/30/1981 12AM"
+                                    ng-model="due_date"/>
+                            <span class="glyphicon glyphicon-calendar action-icon"  aria-hidden="true"></span>
+                        </div>
+                        <div class="col-sm-12" >
+                            <label class="col-sm-2 form-label">Note :</label>
+                            <textarea class="col-sm-10 input-create-task" style="height: 100px;"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
