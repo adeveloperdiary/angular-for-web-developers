@@ -9,7 +9,7 @@ angular.module('taskTracker')
         this.loadTaskdata=function(){
 
             var defered=$q.defer();
-            var httpPromise=$http.get('data/data.json')
+            $http.get('data/data.json')
                 .success(function(data){
                     defered.resolve(data);
                     arrLabels=data.labels;

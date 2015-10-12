@@ -1,32 +1,31 @@
-<div class="padding-20">
+<div class="padding-20" id="page-body">
     <div class="panel panel-default bg-update">
         <div class="panel-body">
             <div class="panel-top-header">
-                {{label}}
-                <i class="fa fa-pencil-square-o pull-right action-icon" ng-hide="label==='All Tasks' || label==='All Pending'"></i>
+                Inbox
+                <i class="fa fa-pencil-square-o pull-right action-icon"></i>
             </div>
 
             <div class="padding-20">
-                <form class="form-horizontal form-padding padding-bottom-20" ng-hide="label==='All Tasks' || label==='All Pending'">
+                <form class="form-horizontal form-padding padding-bottom-20" >
                     <div class="row">
                         <div class="col-sm-10" >
-                            <input type="text" class="form-control input-create-task" placeholder="Create New Task" ng-model="txtTaskName"
-                                    ng-keyup="$event.keyCode==13 ? createQuickTask() : null"/>
+                            <input type="text" class="form-control input-create-task" placeholder="Create New Task"/>
                         </div>
                         <div class="col-sm-1">
 
                         </div>
                         <div class="col-sm-1">
-                            <button type="button" class="btn btn-info pull-right" ng-click="createNewTask()">Add Task</button>
+                            <button type="button" class="btn btn-info pull-right" onclick="javascript:window.open('createTask.html','_self')">Add Task</button>
                         </div>
                     </div>
                 </form>
 
                 <ul class="list-group">
-                    <li class="list-group-item" ng-repeat="task in tasks|filter:filterText:strict">
+                    <li class="list-group-item" ng-repeat="task in tasks">
                         <input id="{{task.id}}" type="checkbox" ng-model="task.completed" ng-change="updateTask(task)">
                         <label for="{{task.id}}" class='checkbox-label' ng-class="task.completed==true?'crossed':none">{{task.name}}</label>
-                        <span class="glyphicon glyphicon-trash pull-right action-icon"  aria-hidden="true" ng-click="deleteTask(task)"></span>
+                        <span class="glyphicon glyphicon-trash pull-right action-icon"  aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-pencil pull-right action-icon"  aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-star-empty pull-right action-icon"  aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-time pull-right action-icon"  aria-hidden="true"></span>
