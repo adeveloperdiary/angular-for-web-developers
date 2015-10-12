@@ -4,6 +4,7 @@ body,html {
    width:100%;
    min-width: 700px;
    height: 100%;
+   background-attachment:fixed;
 
 }
 
@@ -52,6 +53,7 @@ body,html {
    font-size: 16px;
    font-weight: 600;
    text-shadow: 1px 1px #000;
+   cursor: pointer;
 }
 
 .sidebar-nav li a:hover {
@@ -147,6 +149,28 @@ body,html {
 .color_blue{
    background-color: #54a5d4 !important;
 }
+
+.color_red1{
+   background-color: #d9534f !important;
+}
+
+.color_sky{
+   background-color: #5bc0de !important;
+}
+
+.color_yellow{
+   background-color: #F0AD56 !important;
+}
+
+.color_green1{
+   background-color: #5cb85c !important;
+}
+
+.color_blue1{
+   background-color: #337ab7 !important;
+}
+
+
 .todo-badge {
    text-indent: 0;
    display: inline-block;
@@ -284,12 +308,17 @@ input[type='checkbox']:checked + .checkbox-label::before {
    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
    border:none;
    border-top: 5px solid #435757;
+   margin-top: 80px
 }
 
 .bg-container{
-   background-color: rgba(255, 255, 255, .2);
+   width:100%;
+   -background-color: rgba(255, 255, 255, .2);
+   background-color: #B3D6D8;
    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+   position: fixed;
    border:none;
+   z-index: 1;
 }
 
 .action-icon{
@@ -307,6 +336,7 @@ input[type='checkbox']:checked + .checkbox-label::before {
 .btn-task-category{
    margin-top: 15px;
    margin-right:20px;
+   margin-right: 270px;
 }
 
 .padding-header {
@@ -348,37 +378,41 @@ input[type='checkbox']:checked + .checkbox-label::before {
    }
 
    #wrapper{
-       padding-left: 200px;
+      padding-left: 200px;
    }
 
-    #sidebar-wrapper {
-        left: 200px;
-        margin-left: -200px;
-        width: 200px;
-    }
+   #sidebar-wrapper {
+      left: 200px;
+      margin-left: -200px;
+      width: 200px;
+   }
 
-    .sidebar-nav {
-        width: 200px;
-    }
+   .sidebar-nav {
+      width: 200px;
+   }
 
-    .sidebar-nav > .sidebar-brand a {
-        font-size: 25px;
-    }
+   .sidebar-nav > .sidebar-brand a {
+      font-size: 25px;
+   }
 
 }
 
 
 @media (max-width: 770px) {
-    #btnCreateLabel{
-        display: none;
-    }
+   #btnCreateLabel{
+      display: none;
+   }
 
-    .filter-text {
-        display: none;
+   .filter-text {
+      display: none;
 
-    }
+   }
 }
 
 .height-65{
    height: 65px;
+}
+
+.crossed {
+   text-decoration: line-through;
 }
