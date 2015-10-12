@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Task Tracker</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -10,38 +10,46 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/angular_1.4.js"></script>
+
 </head>
-<body>
+<body ng-app="taskTracker">
 <div id="wrapper">
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav ">
+    <div id="sidebar-wrapper" ng-controller="labelController">
+        <ul class="sidebar-nav">
             <li class="sidebar-brand"><a href="#">Task Tracker</a></li>
             <li><a href="#" class="inbox_icon">Inbox</a><div class="todo-badge">14</div></li>
             <li><a href="#"  class="all_icon">All Tasks</a><div class="todo-badge">14</div></li>
             <li><a href="#"  class="pending_icon">All Pending</a><div class="todo-badge">14</div></li>
             <li><br></li>
-            <li><div class="circle color_red"></div><a href="#">Work</a><div class="todo-badge">14</div></li>
-            <li><div class="circle color_green"></div><a href="#">Home</a><div class="todo-badge">14</div></li>
-            <li><div class="circle color_blue"></div><a href="#">Travel</a><div class="todo-badge">14</div></li>
+
+            <li ng-repeat="label in data.labels">
+                <div class="circle" ng-class="label.color"></div>
+                <a href="#">{{label.name}}</a>
+                <div class="todo-badge">14</div>
+            </li>
+
+
         </ul>
     </div>
     <div id="page-content-wrapper">
-
-        <div class="panel panel-default bg-container">
+        <div class="panel panel-default bg-container" id="page-header">
             <div class="panel-body">
                 <div class="panel-top-header padding-header">
                     <form class="form-horizontal form-padding">
                         <div class="row height-65">
                             <label class="col-sm-1 filter-text">Filter By :</label>
                             <div class="col-sm-2 filter-input"><input type="text" class="form-control" /></div>
-                            <button type="button" class="btn btn-danger pull-right btn-task-category" onclick="javascript:window.open('createLabel.html','_self')">Create Label</button>
+                            <button type="button" id="btnCreateLabel" class="btn btn-danger pull-right btn-task-category" onclick="javascript:window.open('createLabel.html','_self')">Create Label</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
 
-        <div class="padding-20">
+        <div class="padding-20" id="page-body" ng-controller="taskListController">
             <div class="panel panel-default bg-update">
                 <div class="panel-body">
                     <div class="panel-top-header">
@@ -65,33 +73,9 @@
                         </form>
 
                         <ul class="list-group">
-                            <li class="list-group-item">
-                                <input id="item1" type="checkbox" checked>
-                                <label for="item1" class='checkbox-label'>Learn Angular JS</label>
-                                <span class="glyphicon glyphicon-trash pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-pencil pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-star-empty pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-time pull-right action-icon"  aria-hidden="true"></span>
-                            </li>
-                            <li class="list-group-item">
-                                <input id="item2" type="checkbox">
-                                <label class='checkbox-label' for="item2">Complete Monthly Report</label>
-                                <span class="glyphicon glyphicon-trash pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-pencil pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-star-empty pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-time pull-right action-icon"  aria-hidden="true"></span>
-                            </li>
-                            <li class="list-group-item">
-                                <input id="item4" type="checkbox">
-                                <label class='checkbox-label' for="item4">Submit upcoming release plan</label>
-                                <span class="glyphicon glyphicon-trash pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-pencil pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-star pull-right action-icon"  aria-hidden="true"></span>
-                                <span class="glyphicon glyphicon-time pull-right action-icon"  aria-hidden="true"></span>
-                            </li>
-                            <li class="list-group-item">
-                                <input id="item5" type="checkbox">
-                                <label class='checkbox-label' for="item5">Update defect status</label>
+                            <li class="list-group-item" ng-repeat="task in data1.tasks">
+                                <input id="{{task.id}}" type="checkbox" checked>
+                                <label for="{{task.id}}" class='checkbox-label'>{{task.name}}</label>
                                 <span class="glyphicon glyphicon-trash pull-right action-icon"  aria-hidden="true"></span>
                                 <span class="glyphicon glyphicon-pencil pull-right action-icon"  aria-hidden="true"></span>
                                 <span class="glyphicon glyphicon-star-empty pull-right action-icon"  aria-hidden="true"></span>
@@ -104,7 +88,8 @@
         </div>
     </div>
 </div>
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="app/app.js"></script>
+<script src="app/label/label.js"></script>
+<script src="app/task/task.js"></script>
 </body>
 </html>
